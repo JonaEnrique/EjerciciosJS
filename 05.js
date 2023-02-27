@@ -13,8 +13,16 @@ function buscaDestruye(arreglo, num) {
   // Ej: buscaDestruye([1, 2, 3, 4, 1], 1) devuelve => [2, 3, 4]
   //
   // Tu código aca:
-  
+  const nuevArreglo = arreglo.filter(numero => {
+    return numero != num;
+  })
+
+  return nuevArreglo; // Está bien hacerlo sobre el mismo?
 };
+
+const arrayInt = [1, 2, 4, 2, 3, 1, 1, 5, 7];
+
+console.log(buscaDestruye(arrayInt, 1));
 
 // No modifiques nada debajo de esta linea //
 
