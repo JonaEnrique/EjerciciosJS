@@ -45,7 +45,7 @@ function bienvenidoSr(persona) {
 
 };
 
-// hola cómo estássssssssssssss
+// hola cómo estásssssssssssssssss
 
 const persona = {
   nombre: "Lionel",
