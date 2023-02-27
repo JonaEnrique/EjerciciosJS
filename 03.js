@@ -42,7 +42,6 @@ function bienvenidoSr(persona) {
   }
 
   return invitacion;
-
 };
 
 
@@ -52,7 +51,7 @@ const persona = {
   invitado: true
 };
 
-console.log(bienvenidoSr)
+console.log(bienvenidoSr(persona))
 
 // No modifiques nada debajo de esta linea //
 
