@@ -23,7 +23,37 @@ function bienvenidoSr(persona) {
   //
   // Tu código:
 
+  let invitacion = [];
+
+  if(persona.invitado && persona.nombre && persona.apellido) {
+    invitacion = `${persona.nombre} ${persona.apellido}, un gusto tenerlo nuevamente! Bienvenido`;
+  }
+
+  if(persona.invitado && !persona.nombre && persona.apellido) {
+    invitacion = `Bienvenido Sr. ${persona.apellido}`;
+  }
+
+  if(persona.invitado && persona.nombre && !persona.apellido) {
+    invitacion = `Hola ${persona.nombre}, tu mesa está lista`;
+  }
+
+  if(!persona.invitado) {
+    invitacion = `Disculpe señor, no está invitado a la fiesta`;
+  }
+
+  return invitacion;
+
 };
+
+// hola
+
+const persona = {
+  nombre: "Lionel",
+  apellido: 'Messi',
+  invitado: true
+};
+
+console.log(bienvenidoSr)
 
 // No modifiques nada debajo de esta linea //
 
