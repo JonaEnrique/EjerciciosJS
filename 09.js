@@ -11,8 +11,27 @@ function intercambio(objeto) {
   // NOTA: No utilizar métodos de Object (values, keys, entries);
   //
   // Tu código:
+  let objetoClaveValorInter = {};
 
+  /* Recorremos el objeto original y vamos agregando propieades al nuevo objeto copia
+  intercambiando las propiedades con la nomenclatura adecuada */
+  for(let prop in objeto) {
+    objetoClaveValorInter[objeto[prop]] = prop;
+  }
+
+  return objetoClaveValorInter;
 };
+
+// const obj = {a: 1, b: 2, c: 3};
+
+//   for (let prop in obj) {
+//     console.log(prop + ': ' + obj[prop]);
+//   }
+
+const obj = {nombre: "Jonathan", apellido: "Enrique"};
+const objInter = intercambio(obj);
+
+console.log(objInter);
 
 // No modifiques nada debajo de esta linea //
 
